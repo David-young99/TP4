@@ -225,10 +225,21 @@ Comparación:
 
 ![alt text](https://github.com/David-young99/TP4/blob/8a4b42bc170787eb320efc48f43d2cb0762ff4ed/Matriz1.png)
 
+Validación de precisión general:
+0.7571428571428571
 
 2. Matriz del RandomForest:
 
 
 ![alt text](https://github.com/David-young99/TP4/blob/a7144305f9bf4c850073f6e708b0569f74dd6d56/Matriz2.png)
 
+Validación de precisión general:
+0.7285714285714285
 
+
+<h2>Mapas finales con su respectiva simbología</h2>
+
+
+1. Mapa final de clasificación mediante SmileCart en la cuenca del Tempisque, Guanacaste, Costa Rica.
+
+1. Mapa final de clasificación mediante RandomForest en la cuenca del Tempisque, Guanacaste, Costa Rica.
