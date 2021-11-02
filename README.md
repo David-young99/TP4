@@ -203,6 +203,7 @@ En cuanto al algoritmo para Machine Learning “Random Forest” es utilizado en
 
 Este método utiliza árboles de decisión, los cuales vienen siendo como grupos de condicionales que determinan el resultado de la clasificación de un grupo de píxeles en este caso. Estos árboles van discriminando los píxeles que cumplen con una condición, en nuestro ejercicio viene siendo las clases o categorías de cobertura. Entonces como se ve en la figura de abajo , podríamos reemplazar las preguntas de “is red?” o “is underline?” por la reflectancia de cierto rango y la otra por colores de píxeles que nosotros le “enseñamos” a estos árboles, así es como categoriza cada píxel de la imagen en alguna de las categorías. 
 
-![alt text](https://github.com/David-young99/TP4/blob/main/Captura%20de%20pantalla%202021-11-02%20153554.jpg)
 
+
+![alt text](https://github.com/David-young99/TP4/blob/main/Captura%20de%20pantalla%202021-11-02%20153554.jpg)
 
