@@ -220,3 +220,7 @@ Comparación:
 
 <h2>Matrices</h2>
 
+1. Matriz del SmileCart:
+
+
+2. Matriz del RandomForest:
