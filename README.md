@@ -199,4 +199,4 @@ El clasificador smileCart pertenece al grupo CART el cual es un término en gene
 
 <h3>2. RandomForest </h3>
 
-![alt text](https://github.com/David-young99/TP4/blob/209b218a4b001439a380a99db217482519f5251c/ee-chart%20(4).png)
+![alt text](https://github.com/David-young99/TP4/blob/main/Captura%20de%20pantalla%202021-11-02%20153554.jpg)
