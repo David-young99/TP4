@@ -188,3 +188,7 @@ print('Validación de precisión general: ', testAccuracy.accuracy());
 ![alt text](https://github.com/David-young99/TP4/blob/209b218a4b001439a380a99db217482519f5251c/ee-chart%20(4).png)
 
 
+<h2>Descripción de los clasificadores</h2>
+
+
+<h3>1. SmileCart </h3>
