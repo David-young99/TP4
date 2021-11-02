@@ -182,3 +182,5 @@ print('Validación de precisión general: ', testAccuracy.accuracy());
 
 
 
+<h2>Curvas Espectrales</h2>
+
