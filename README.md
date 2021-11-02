@@ -207,3 +207,5 @@ Este método utiliza árboles de decisión, los cuales vienen siendo como grupos
 
 ![alt text](https://github.com/David-young99/TP4/blob/main/Captura%20de%20pantalla%202021-11-02%20153554.jpg)
 
+
+<h2>Comparación entre los clasificadores</h2>
