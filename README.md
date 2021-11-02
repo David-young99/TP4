@@ -5,6 +5,10 @@
 
 
 <h1>Código con el clasificador de smileCart</h1>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
 
 var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
     .filterBounds(roi)
