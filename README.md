@@ -223,7 +223,7 @@ Comparación:
 1. Matriz del SmileCart:
 
 
-![alt text](https://github.com/David-young99/TP4/blob/a7144305f9bf4c850073f6e708b0569f74dd6d56/Matriz1.png)
+![alt text](https://github.com/David-young99/TP4/blob/8a4b42bc170787eb320efc48f43d2cb0762ff4ed/Matriz1.png)
 
 
 2. Matriz del RandomForest:
