@@ -66,6 +66,7 @@ print('Validación de precisión general: ', testAccuracy.accuracy());
 
 //---------------------Gráficos firmas espectrales----------------
 //Bandas para análisis, y el feature collection.
+
 var subset = image.select('B[1-7]')
 var samples = ee.FeatureCollection([BosqueP,CultivoP,BodyWaterP,SueloDesnudoP,NubesP, UrbanP,Sombras_nubesP]);
 
@@ -94,6 +95,7 @@ var plotOptions = {
 
 /*Defina una lista de longitudes de onda Landsat-8 para las etiquetas del eje X. Esto 
 ser revisa en los metadatos de la colección*/
+
 var wavelengths = [443, 482, 562, 655, 865, 1609, 2201];
 
 // Crear gráfico 2 
