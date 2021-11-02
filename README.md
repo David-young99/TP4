@@ -1,7 +1,13 @@
 ## Código de Google Earth Engine
 
-// Recordar que el código posee elementos que se importaron pero que no aparecen acá, siendo estos todas las geometrías, la imagen LANDSAT y la capa máscara "tempisque" para recortar el resultado.
+// Recordar que el código posee elementos que se importaron pero que no aparecen acá, siendoe estos todas las geometrías, la imagen LANDSAT y la capa máscara "tempisque" para recortar el resultado.
+
+
+
 ### Código con el clasificador de smileCart
+""
+""
+"""
 var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
     .filterBounds(roi)
     .filterDate('2020-01-01', '2020-02-28')
@@ -66,7 +72,6 @@ print('Validación de precisión general: ', testAccuracy.accuracy());
 
 //---------------------Gráficos firmas espectrales----------------
 //Bandas para análisis, y el feature collection.
-
 var subset = image.select('B[1-7]')
 var samples = ee.FeatureCollection([BosqueP,CultivoP,BodyWaterP,SueloDesnudoP,NubesP, UrbanP,Sombras_nubesP]);
 
@@ -95,7 +100,6 @@ var plotOptions = {
 
 /*Defina una lista de longitudes de onda Landsat-8 para las etiquetas del eje X. Esto 
 ser revisa en los metadatos de la colección*/
-
 var wavelengths = [443, 482, 562, 655, 865, 1609, 2201];
 
 // Crear gráfico 2 
@@ -106,4 +110,76 @@ var Chart2 = ui.Chart.image.regions(
  
 // Desplegar el gráfico
 print(Chart2);
+
+
+
+
+### Código con el clasificador de randomForest
+
+
+
+
+// Recordar que el código posee elementos que se importaron pero que no aparecen acá, siendoe estos todas las geometrías, la imagen LANDSAT y la capa máscara "tempisque" para recortar el resultado.
+
+var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
+    .filterBounds(roi)
+    .filterDate('2020-01-01', '2020-02-28')
+    .sort('CLOUD_COVER')
+    .first());
+Map.addLayer(image, {bands: ['B4', 'B3', 'B2'],min:0, max: 3000}, 'True colour image');
+//Unir clases Fusionar.
+var classNames = Bosque.merge(BodyWater).merge(Cultivo).merge(SueloDesnudo).merge(Nubes).merge(Urban).merge(Sombras_nubes);
+
+print(classNames);
+ 
+//Valores de reflectancia de las bandas
+var bands = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7'];
+
+//select para que tome esas bandas, así como las propiedades de la clase
+var training = image.select(bands).sampleRegions({
+  collection: classNames,
+  properties: ['landcover'],
+  scale: 30
+});
+print(training);
+
+// Establezca el algoritmo de clasificacion. 
+var classifier = ee.Classifier.smileRandomForest(7).train({
+  features: training,
+  classProperty: 'landcover', 
+  inputProperties: bands
+});
+
+//Run the classification
+var classified = image.select(bands).classify(classifier);
+var final= classified.clip(tempisque);
+
+//Display classification Map.center para centrar la vista.
+Map.centerObject(classNames, 11);
+Map.addLayer(final,
+{min: 0, max: 6, palette: ['green', 'yellow', 'blue','brown','white','gray', "black"]},
+'classification');
+
+//----------------------Matriz Confusión-----------------------------------
+
+var valNames = vbosque.merge(vBodyWater).merge(vcultivo).merge(vSueloDesnudo).merge(vNubes).merge(vUrban).merge(vSombras_Nubes);
+
+//
+var validation = classified.sampleRegions({
+  collection: valNames,
+  properties: ['landcover'],
+  scale: 30,
+});
+print(validation);
+
+//
+var testAccuracy = validation.errorMatrix('landcover', 'classification');
+
+//
+print('Validación de error matrix: ', testAccuracy);
+
+//
+print('Validación de precisión general: ', testAccuracy.accuracy());
+
+
 
