@@ -207,5 +207,5 @@ Este método utiliza árboles de decisión, los cuales vienen siendo como grupos
 
 ![alt text](https://github.com/David-young99/TP4/blob/main/Captura%20de%20pantalla%202021-11-02%20153554.jpg)
 
-Fuente de la decripción de random forest y la figura #1: Yiu. T. (2019)
+Fuente de la decripción de random forest y la figura: Yiu. T. (2019)
 <h2>Comparación entre los clasificadores</h2>
