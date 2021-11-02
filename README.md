@@ -4,7 +4,7 @@
 
 
 
-<h3>Código con el clasificador de smileCart</h1>
+<strong><h3>Código con el clasificador de smileCart</h1></strong>
 
 
 var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
@@ -113,7 +113,7 @@ print(Chart2);
 
 
 
-### Código con el clasificador de randomForest
+<strong><h2>Código con el clasificador de randomForest</h2></strong>
 
 
 
