@@ -196,3 +196,7 @@ print('Validación de precisión general: ', testAccuracy.accuracy());
 <p style="text-align:center;"> SmileeCart, al ser un tipo de clasificación supervisada, necesita áreas preestablecidas, o áreas de entrenamiento de los tipos de cobertura, para poder ajustar de una manera correcta los parámetros que utiliza dicho clasificador. Dado a que este algoritmo logra identificar de manera automática, y etiquetar áreas las cuales presentan características similares a las áreas de entrenamiento.  
 El clasificador smileCart pertenece al grupo CART el cual es un término en general que trata de referirse a las clasificaciones pertenecientes a un árbol de decisiones. En estos lo que se realiza es tomar o identificar las relaciones existentes entre variables de una una respuesta (continua) con variables explicativas (independientes), múltiples, continuos o discretas, donde por medio de procesos, las datos o valores de píxeles en este caso, se dividen repetitivamente, forman grupos cada vez homogéneos, donde se utilizan combinaciones de variables, las cuales cada vez se distinguen mejor la variación de la variable independiente.(Ying, et al. 2020)</p>
 
+
+<h3>2. RandomForest </h3>
+
+![alt text](https://github.com/David-young99/TP4/blob/209b218a4b001439a380a99db217482519f5251c/ee-chart%20(4).png)
