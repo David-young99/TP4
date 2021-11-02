@@ -244,3 +244,7 @@ Validación de precisión general:
 ![alt text](https://github.com/David-young99/TP4/blob/main/mapa2.png)
 1. Mapa final de clasificación mediante RandomForest en la cuenca del Tempisque, Guanacaste, Costa Rica.
 ![alt text](https://github.com/David-young99/TP4/blob/main/mapa1.png)
+
+
+<h2>Conclusiones</h2>
+
