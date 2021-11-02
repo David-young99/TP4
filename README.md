@@ -185,5 +185,6 @@ print('Validación de precisión general: ', testAccuracy.accuracy());
 <h2>Curvas Espectrales</h2>
 
 ![alt text](https://github.com/David-young99/TP4/blob/3ad80e9dcfdf1775b1d26f75c0ef43229bc5a962/ee-chart%20(3).png)
+![alt text](https://github.com/David-young99/TP4/blob/209b218a4b001439a380a99db217482519f5251c/ee-chart%20(4).png)
 
 
