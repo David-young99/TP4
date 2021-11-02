@@ -209,3 +209,14 @@ Este método utiliza árboles de decisión, los cuales vienen siendo como grupos
 
 Fuente de la decripción de random forest y la figura: Yiu. T. (2019)
 <h2>Comparación entre los clasificadores</h2>
+
+Comparación:
+
+1. El RandomForest solicita un parámetro obligatorio, siendo este un Integer mayor a 0, el determina la cantidad de árboles de decisión con la cual trabajará el algoritmo, por otra parte los parámetros que pide el SmileCart son opcionales, pues en caso de no escribirlos automáticamente se asignan valores nulos o los números necesarios para trabajar.
+2. En el resultado final, hay diferencias en la clasificación, en especial las clases de cultivos, suelo desnudo, bosque y cuerpos de agua, principalmente, o son más notorios los cambios en estas. Por ejemplo, en el SmileCart se muestran algunas zonas de bosque donde el RandomForest detecta en parte, cuerpos de agua.
+3. Otra diferencia entre los clasificadores es: el SmileCart muestra con mayor facilidad zonas urbanas, en cambio el RandomForest muestra en especial los núcleos más densos de las zonas urbanas, conforme nos alejamos de este, las partes urbanas las detecta como suelo desnudo o zonas de cultivo.
+4. La diferencia en la validación de la precisión general difiere entre los dos clasificadores, para el caso del SmileCart es de: 0.7571428571428571 y para el caso del RandomForest: 0.7285714285714285, siendo menor en el RandomForest, como se puede observar. Esto se puede deber por la clasificación final, al usar un método de clasificación diferente, los valores entre las geometrías de clasificación y las geometrías de validación cambian para ambos métodos. 
+
+
+<h2>Matrices</h2>
+
