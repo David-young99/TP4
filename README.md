@@ -260,3 +260,6 @@ El clasificador smileCart, es un logaritmo de una buena precisión, siempre y cu
 <h2>Bibliografía</h2>
 
 Tu, Ying & Lang, Wei & Yu, Le & Li, Ying & Junhao, Jiang & Qin, Yawen & Wu, Jiemin & Chen, Tingting & Xu, Bing. (2020). Improved Mapping Results of 10 m Resolution Land Cover Classification in Guangdong, China Using Multi-Source Remote Sensing Data with Google Earth Engine. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing. 13. 10.1109/JSTARS.2020.3022210.
+
+
+Yiu. T. (2019). Understanding Random Forest. Towards data science. Recuperado de: https://towardsdatascience.com/understanding-random-forest-58381e0602d2
