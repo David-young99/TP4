@@ -248,10 +248,15 @@ Validación de precisión general:
 
 <h2>Conclusiones</h2>
 
-[su parte de conclusiones jose jose XD]
-
 Se observa que el Machine Learning es una herramienta que facilita el procesamiento y análisis de datos, y no solo en Geografía, estas técnicas se pueden usar también para análisis de mercado, por ejemplo predecir el comportamiento de un consumidor, en base a lo que ha podido aprender de él anteriormente (compras realizadas, búsquedas entre otros, en conjunto al Big Data).
 
 Pero en Geografía, tiene una aplicación inmediata al procesamiento de datos, por ejemplo en este ejercicio, donde una clasificación manual tomaría días poder dar esos resultados, la clasificación podría permitirnos detectar características que no son visibles a simple vista, medir la extensión del área de una cobertura, clasificar el uso del suelo, clasificar la cobertura vegetal, planificar la expansión urbana, entre muchas otras aplicaciones. 
 
 Siendo más específicos al ejercicio, se rescata algunos puntos del random forest, por ejemplo, en comparación al otro método de clasificación, el random forest necesita un parámetro de tipo Integer (número entero) positivo y diferente a 0, para poder funcionar, o sea es obligatorio. Este parámetro hace referencia a el número de árboles de decisión que toma el algoritmo, como se explicó anteriormente. 
+
+El clasificador smileCart, es un logaritmo de una buena precisión, siempre y cuando las áreas de estudio sean amplias, y en las cuales, las clases se encuentren bien distribuidas sobre esta área, en nuestro caso los valores de validación rondaron entre 75% y 72%, a pesar de ser valores buenos, se pueden mejorar aumentando la precisión de los puntos de validación (en este caso se realizaron a “vista” en la imagen satelital de estudio), estos tienden a realizarse en campo en áreas ya estudiadas y verificadas propiamente. 
+
+
+<h2>Bibliografía</h2>
+
+Tu, Ying & Lang, Wei & Yu, Le & Li, Ying & Junhao, Jiang & Qin, Yawen & Wu, Jiemin & Chen, Tingting & Xu, Bing. (2020). Improved Mapping Results of 10 m Resolution Land Cover Classification in Guangdong, China Using Multi-Source Remote Sensing Data with Google Earth Engine. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing. 13. 10.1109/JSTARS.2020.3022210.
