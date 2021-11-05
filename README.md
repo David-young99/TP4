@@ -6,7 +6,7 @@ Recordar que el código posee elementos que se importaron pero que no aparecen a
 
 <strong><h3>Código con el clasificador de smileCart</h1></strong>
 
-´´´
+`
 var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
     .filterBounds(roi)
     .filterDate('2020-01-01', '2020-02-28')
@@ -14,14 +14,19 @@ var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
     .first());
 Map.addLayer(image, {bands: ['B4', 'B3', 'B2'],min:0, max: 3000}, 'True colour image');
 
+
 //Unir clases Fusionar.
+
 var classNames = Bosque.merge(BodyWater).merge(Cultivo).merge(SueloDesnudo).merge(Nubes).merge(Urban).merge(Sombras_nubes);
 print(classNames);
- 
+
 //Valores de reflectancia de las bandas
+
 var bands = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7'];
 
+
 //Seleccionar bandas, así como las propiedades.
+
 var training = image.select(bands).sampleRegions({
   collection: classNames,
   properties: ['landcover'],
@@ -46,9 +51,10 @@ Map.addLayer(final,
 {min: 0, max: 6, palette: ['green', 'yellow', 'blue','brown','white','gray', "black"]},
 'classification');
 
+`
 
-//----------------------Matriz Confusión-----------------------------------
-
+Matriz Confusión
+`
 var valNames = vbosque.merge(vBodyWater).merge(vcultivo).merge(vSueloDesnudo).merge(vNubes).merge(vUrban).merge(vSombras_Nubes);
 
 // Validación
@@ -68,8 +74,9 @@ print('Validación de error matrix: ', testAccuracy);
 //
 print('Validación de precisión general: ', testAccuracy.accuracy());
 
-
-//---------------------Gráficos firmas espectrales----------------
+`
+Gráficos firmas espectrales
+`
 //Bandas para análisis, y el feature collection.
 var subset = image.select('B[1-7]')
 var samples = ee.FeatureCollection([BosqueP,CultivoP,BodyWaterP,SueloDesnudoP,NubesP, UrbanP,Sombras_nubesP]);
@@ -111,11 +118,11 @@ var Chart2 = ui.Chart.image.regions(
 print(Chart2);
 
 
-
+`
 
 <strong><h2>Código con el clasificador de randomForest</h2></strong>
 
-
+`
 
 
 // Recordar que el código posee elementos que se importaron pero que no aparecen acá, siendoe estos todas las geometrías, la imagen LANDSAT y la capa máscara "tempisque" para recortar el resultado.
@@ -158,9 +165,9 @@ Map.centerObject(classNames, 11);
 Map.addLayer(final,
 {min: 0, max: 6, palette: ['green', 'yellow', 'blue','brown','white','gray', "black"]},
 'classification');
-
-//----------------------Matriz Confusión-----------------------------------
-
+`
+Matriz Confusión
+`
 var valNames = vbosque.merge(vBodyWater).merge(vcultivo).merge(vSueloDesnudo).merge(vNubes).merge(vUrban).merge(vSombras_Nubes);
 
 //
@@ -180,7 +187,7 @@ print('Validación de error matrix: ', testAccuracy);
 //
 print('Validación de precisión general: ', testAccuracy.accuracy());
 
-
+`
 
 <h2>Curvas Espectrales</h2>
 
