@@ -6,7 +6,7 @@ Recordar que el código posee elementos que se importaron pero que no aparecen a
 
 <strong><h3>Código con el clasificador de smileCart</h1></strong>
 
-'''
+´´´
 var image = ee.Image(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
     .filterBounds(roi)
     .filterDate('2020-01-01', '2020-02-28')
